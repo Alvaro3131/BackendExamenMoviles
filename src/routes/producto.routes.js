@@ -1,0 +1,10 @@
+import { Router } from "express";
+import * as producto from "../controllers/producto.controllers";
+const router = Router();
+router.get("/", producto.getProductos);
+router.post("/", producto.createEstudiante);
+router.get("/:id", producto.getProducto);
+router.get("/search/:nombre", producto.searchEstudiante);
+router.put("/:id", producto.updateEstudiante);
+router.delete("/:id", producto.deleteEstudiante);
+export default router;
